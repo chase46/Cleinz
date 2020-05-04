@@ -2,3 +2,32 @@
     padding-bottom: 2rem;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 2rem;
+    width: 100%;
+    background-color: #298494;
+    padding-right: 5rem;
+    z-index: 2000;
+    border-bottom: 1px solid rgba(180, 176, 176, 0.589);
+    
+}
+
+.navigation.sticky {
+    padding: 2rem 0;
+    width: 130.4rem;
+    z-index: 2;
+    
+}
+
+.navigation.sticky ul:last-child {
+    padding-right: 4rem;
+    z-index: 2;
+}
+
+
+.navigation.sticky .logo{
+    color: #fff;
+}
+

@@ -14,7 +14,8 @@ body {
     line-height: 1.6;
     font-family: "mukta", sans-serif;
     font-size: 1.6rem;
-    
+    padding: 2rem;
+    overflow-x: hidden;
     background-attachment: fixed;
 
     ::selection {
@@ -31,7 +32,11 @@ body {
     background-position: center;
     background-size: cover;
     height: 100vh;
-    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+
+
+    .buttons {
+        text-align: center;
+    }
 }
 
 section {

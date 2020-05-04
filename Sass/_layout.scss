@@ -7,12 +7,13 @@
     justify-content: flex-end;
     margin-bottom: 5rem;
     
+    
+    
     .logo {
         font-size: 3.5rem;
         position: absolute;
         left: 4rem;
         color: $color-secondary;
-        z-index: 400;
         font-family: "montserrat";
         letter-spacing: 6px;
     }
@@ -31,11 +32,14 @@
     &__link:link,
     &__link:visited {
         text-decoration: none;
-        color: $color-grey-dark-1;
+        color: $color-white;
         font-size: 1.5rem;
         padding: .8rem 1rem;
         transition: all .2s;
         border: 1px solid transparent;
+        display: flex;
+        align-items: center;
+        padding-right: .5rem;
     }
 
     &__link:active,
@@ -44,6 +48,7 @@
         color: $color-grey-light-1;
     }
 }
+
 
 .line {
     border: 1px solid #555;
@@ -61,6 +66,7 @@
         text-transform: uppercase;
         font-family: "montserrat";
         
+        
         span {
             color: $color-secondary;
         }
@@ -71,6 +77,7 @@
         margin: 0 auto;
         font-weight: 200;
     }
+    
 }
 
 
@@ -101,6 +108,7 @@
         display: grid;
         grid-template-rows: repeat(2, min-content);
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        
 
         grid-gap: 1.5rem;
         justify-content: center;
@@ -109,7 +117,7 @@
         list-style: none;
 
         &-items {
-            background-color: #aca8a8;
+            background-color: $color-secondary;
             border-radius: 4px;
             transition: all .3s;
 
@@ -123,7 +131,7 @@
             display: grid;
             align-content: center;
             justify-items: center;
-            color: $color-secondary;
+            color: $color-white;
             padding-top: 2rem
         }
         
@@ -139,9 +147,9 @@
 // OUR WORK //
 
 .works {
+    color: $color-white;
     margin-top: 8rem;
-    height: 30rem;
-    background-color: #aca8a8;
+    background-color: $color-secondary;
     clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
     padding: 8rem;
 }
@@ -156,13 +164,18 @@
     &__items {
         max-height: 30rem;
         padding: 1.5rem;
+        cursor: pointer;
+
+        &:focus {
+            outline: none;
+        }
        
     }
 }
 
 .slick-prev,
 .slick-next {
-    background-color: $color-secondary;
+    background-color: #555;
     width: 4rem;
     height: 4rem;
     z-index: 1;
@@ -175,11 +188,12 @@
 .slick-prev {
     margin-left: -2rem;
 }
+
 .slick-prev:hover,
 .slick-next:hover,
 .slick-prev:active,
 .slick-next:active {
-    background-color: $color-secondary;
+    background-color: #555;
    
 }
 
@@ -193,27 +207,40 @@
 // THE TEAM //
 
 .team {
-    padding: 8rem;
+    margin-top: -4rem;
+    background-color: #aca8a8;
+    padding: 15rem 8rem 15rem 8rem;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-template-rows: repeat(2, min-content);
     grid-gap: 2rem;
+    justify-content: center;
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
 
     &__heading {
         grid-row: 1 / -1;
         grid-column: 1 / -1;
         margin-bottom: 3rem;
     }
+
+    &-item {
+        display: grid;
+        align-items: stretch;
+        grid-gap: 4rem;
+        
+    }
     
     &-item__image {
-        width: 100%;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        justify-self: center;
     }
    
 
     .content {
         display: grid;
+        
         background-color: $color-secondary;
         margin-top: -2rem;
         padding: 2rem;
@@ -222,7 +249,7 @@
         border-bottom-right-radius: 5px;
 
         &__connect {
-            margin: 1rem 0 0.5rem 0
+            margin: 1.5rem 0 1.5rem 0
         }
         &__job {
             font-weight: 200;
@@ -252,5 +279,289 @@
             }
         }
         
+    }
+}
+
+// PLANS
+
+.plan {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-rows: 5rem min-content;
+    grid-row-gap: 3rem;
+    grid-column-gap: 10rem;
+    justify-items: center;
+    padding: 0 10rem;
+    color: white;
+
+    &__heading {
+        grid-row: 1 / -1;
+        grid-column: 1 / -1;
+        margin: 5rem 0 5rem 0;
+    }
+
+    .cards {
+        background-color: #777;
+        width: 100%;
+        border-radius: 5px;
+        display: grid;
+        align-content: flex-start;
+        justify-items: center;
+
+        ion-icon {
+            color: #27d0ee;
+            margin-right: 2rem;
+        }
+
+        h4 {
+            background-color: $color-secondary;
+            width: 100%; 
+        }
+        button {
+            display: block;
+            margin: 2rem 0 2rem 0;
+            
+            &:hover {
+                color: white;
+            }
+            
+
+        }
+        &__pricing {
+            font-size: 6rem;
+            font-weight: 100;
+            font-style: italic;
+            color: #3bcae4;
+        }
+        &__items {
+            display: flex;
+            padding: 1rem 0 1rem 0; 
+            align-items: center;
+
+        }
+        &__items:not(:last-child) {
+            border-bottom: 1px solid #fff; 
+                   
+        }
+    }
+}
+
+// CONTACT
+
+.contact {
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+    padding-bottom: 10rem;
+    margin-top: 5rem;
+    height: 50rem;
+    color: #fff;
+    background-color: rgba($color-secondary, 1);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60rem, 1fr));
+    grid-template-rows: 5rem min-content;
+    grid-row-gap: 4rem;
+    
+    //clip-path: polygon(50% 0%, 100% 0, 100% 58%, 100% 92%, 51% 100%, 0 89%, 0 0);
+    clip-path: polygon(0 5%, 0 30%, 0 74%, 0 89%, 40% 89%, 50% 98%, 61% 89%, 86% 89%, 100% 89%, 100% 60%, 100% 29%, 100% 0);
+
+    &__info {
+        display: grid;
+        justify-content: center;
+        grid-row-gap: 4rem;
+        align-content: flex-start;
+
+        &-items span{
+            padding-right: 1rem;
+        }
+
+        &-items ion-icon {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    &__heading {
+        grid-row: 1 / 2;
+        grid-column: 1 / -1;
+        margin-bottom: 3rem;
+    }
+
+    &__form {
+       display: grid;
+       width: 80%;
+       
+
+       input,
+       textarea {
+           padding: 1rem;
+           border-radius: 4px;
+       }
+       
+    }
+    &__label {
+        position: relative;
+        top: -3rem;
+        left: -5.5rem;
+        transition: all 0.3s;
+    }
+
+    &__input:placeholder-shown + &__label {
+        transform: translateX(5rem);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &__title {
+        position: relative;
+        top: -16.5rem;
+        left: -7.5rem;
+        transition: all 0.3s;
+    }
+    
+    &__message:placeholder-shown + &__title {
+        transform: translateX(5rem);
+        opacity: 0;
+        visibility: hidden;
+    }
+    button {
+        display: flex;
+        justify-self: flex-start;
+    }
+
+}
+
+// FOOTER
+
+.footer {
+    display: grid;
+    grid-template-rows: 5rem  5rem min-content;
+    padding: 6rem 1rem 2rem 8rem;
+    margin-top: -8rem;
+    background-color: #555;
+    z-index: 1;
+    .logo {
+        margin-right: 15.5rem;
+            
+        &__info {
+            font-size: 3.5rem;
+            color: $color-secondary;
+            font-family: "montserrat";
+            letter-spacing: 6px;
+        }
+
+        &__text {
+            font-family: "montserrat";
+            font-weight: 200;
+        }
+        &__items {
+            display: block;
+            padding-top: 2rem;
+            font-size: 3.5rem;
+            color: $color-white;
+            font-family: "montserrat";
+            ion-icon {
+                color: $color-secondary;
+            }
+
+            span {
+                display: grid;
+                grid-column: 1 / 2;
+            }
+        } 
+    }
+    &-navigation {
+        font-size: 1.5rem;
+        display: grid;
+        grid-column: 5 / 6;
+        grid-row: 1 / 2;
+        align-content: flex-end;
+        justify-items: flex-start;
+
+    }
+    &-navigation1 {
+        font-size: 1.5rem;
+        display: grid;
+        grid-column: 5 / 6;
+        grid-row: 2 / 3;
+        justify-items: flex-end;
+        padding: 2rem 5rem 0 0;
+
+    }
+    .footer-navigation {
+        margin-right: 5rem;
+        padding-top: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-bottom: 5rem;
+    
+        &__list {
+            list-style: none;
+            text-transform: uppercase;
+            display: flex;
+            
+        }
+    
+        &__list-item:not(:last-child) {
+            margin-right: 2.5rem;
+        }
+    
+        &__link:link,
+        &__link:visited {
+            text-decoration: none;
+            color: $color-white;
+            font-size: 1.5rem;
+            padding: .8rem 1rem;
+            transition: all .2s;
+            border: 1px solid transparent;
+            display: flex;
+            align-items: center;
+            padding-right: .5rem;
+        }
+    
+        &__link:active,
+        &__link:hover {
+            border: 1px solid $color-secondary;
+            color: $color-grey-light-1;
+        }
+    }
+
+    .newsletter {
+        display: grid;
+        width: 70%;
+        grid-column: 5 / 6;
+        justify-self: flex-end;
+        padding-right: 5rem;
+        
+        row-gap: 2rem;
+        &__text {
+            font-family: "montserrat";
+            font-weight: 200; 
+        }
+        &__heading {
+            font-size: 2.5rem;
+            color: $color-secondary;
+            letter-spacing: 2px;
+        }
+        &__form {
+            display: flex;
+        }
+
+        &__input {
+            padding: 1rem;
+            border-radius: 4px;
+            margin-right: 1rem;
+            width: 100%;
+        }
+    }
+    .copyright {
+        color: rgb(231, 227, 227);
+        letter-spacing: 1px;
+        word-spacing: 2px;
+        text-align: center;
+        
+        margin-top: 4rem;
+        width: 94%;
+        grid-column: 1 / span 5;
     }
 }

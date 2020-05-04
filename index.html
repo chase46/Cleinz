@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width initial-scale=1.0, user-scable=yes">
         <title>Cleinz | Make your idea a reality</title>
+        <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Mukta:200,300,400&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="Css/slick.css">
         <link rel="stylesheet" href="Css/slick-theme.css">
@@ -11,7 +12,7 @@
     </head>
     <body>
          <header class="header">
-            <nav class="navigation">
+            <nav class="navigation nav">
                 <div class="logo">Cleinz</div>
                 <ul class="navigation__list">
                     <li class="navigation__list-item"><a href="#" class="navigation__link" id="current-page">Home</a></li>
@@ -30,11 +31,14 @@
                     fugiat quasi deserunt perferendis. Rem aut dolorum animi eaque atque?
                 </p>
             </div>
-            <button class="btn btn__header">See our work</button> 
+            <div class="buttons">
+                <button class="btn btn__header1">Get Started</button> 
+                <button class="btn btn__header">See our work</button>
+            </div> 
         </header>
 
         <section class="about" id="about">
-            <h2 class="heading-main mb-sm">Who we are</h2>
+            <h2 class="heading-main__white mb-sm">Who we are</h2>
             <p class="about__text mb-sm">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 In perferendis reiciendis quisquam? Officiis saepe neque sapiente quis, repellat
@@ -50,7 +54,7 @@
             <button class="btn btn__main">Meet the team</button>
         </section>
         <section class="feature-box" id="offer">
-            <h2 class="heading-main feature-box__heading">What we offer</h2>
+            <h2 class="heading-main__green feature-box__heading">What we offer</h2>
             <ul class="feature-box__list">
                 <li class="feature-box__list-items">
                     <h3 class="heading-sub feature-box__list-heading">Web development</h3>
@@ -82,7 +86,7 @@
         </section>
         
         <section class="works slider" id="slider">
-            <h2 class="heading-main" id="work">Our Work</h2>
+            <h2 class="heading-main__white" id="work">Our Work</h2>
             <div class="slider__list">
                 <div class="slider__items">
                     <img src="./Img/web-1.jpg" alt="slider image 1 class="slider__img">
@@ -100,9 +104,10 @@
                     <img src="./Img/web-5.jpg" alt="slider image 5 class="slider__img">
                 </div>
             </div>
+            <button class="btn btn__slider">View All &#129058;</button>
         </section>
         <section class="team" id="team">
-            <h2 class="heading-main team__heading">Meet our team</h2>
+            <h2 class="heading-main__green team__heading">Meet our team</h2>
             <div class="team-item">
                 <img src="./Img/user-1.jpg" alt="Team picture" class="team-item__image">
                 <div class="content">
@@ -156,14 +161,132 @@
                 </div>
             </div>
         </section>
+        <section class="plan">
+            <h2 class="heading-main__green plan__heading">Choose your plan</h2>
+            <div class="cards">
+                <h4 class="heading-main">Basic</h4>
+                <span class="cards__pricing">$400</span>
+                <ul class="cards__list">
+                    <li class="cards__items"><ion-icon name="checkmark"></ion-icon>1 Page</li>
+                    <li class="cards__items"><ion-icon name="checkmark"></ion-icon>Responsive design</li>
+                    <li class="cards__items"><ion-icon name="close"></ion-icon>Design Customization</li>
+                    <li class="cards__items"><ion-icon name="close"></ion-icon>Content upload</li>
+                    <li class="cards__items"><ion-icon name="close"></ion-icon>E-Commerce functionality</li>
+                    <li class="cards__items"><ion-icon name="close"></ion-icon>Products</li>
+                    
+                </ul>
+                <button class="btn btn__main-plans">Get Started</button>
+            </div>
+            <div class="cards">
+                <h4 class="heading-main">Pro</h4>
+                <span class="cards__pricing">$1200</span>
+                <ul class="cards__list">
+                    <li class="cards__items"><ion-icon name="checkmark"></ion-icon>5 Pages</li>
+                    <li class="cards__items"><ion-icon name="checkmark"></ion-icon>Responsive design</li>
+                    <li class="cards__items"><ion-icon name="checkmark"></ion-icon>Design Customization</li>
+                    <li class="cards__items"><ion-icon name="checkmark"></ion-icon>Content upload</li>
+                    <li class="cards__items"><ion-icon name="close"></ion-icon>E-Commerce functionality</li>
+                    <li class="cards__items"><ion-icon name="close"></ion-icon>Products</li>
+                </ul>
+                <button class="btn btn__main-plans">Buy plan</button>
+            </div>
+            <div class="cards">
+                <h4 class="heading-main">Premium</h4>
+                <span class="cards__pricing">$3000</span>
+                <ul class="cards__list">
+                    <li class="cards__items"><ion-icon name="checkmark"></ion-icon>10 Pages</li>
+                    <li class="cards__items"><ion-icon name="checkmark"></ion-icon>Responsive design</li>
+                    <li class="cards__items"><ion-icon name="checkmark"></ion-icon>Design Customization</li>
+                    <li class="cards__items"><ion-icon name="checkmark"></ion-icon>Content upload</li>
+                    <li class="cards__items"><ion-icon name="checkmark"></ion-icon>E-Commerce functionality</li>
+                    <li class="cards__items"><ion-icon name="checkmark"></ion-icon>20 products</li>
+                </ul>
+                <button class="btn btn__main-plans btn-plan__main">Buy plan</button>
+            </div>
+        </section>
         <section class="contact">
+            <h2 class="heading-main__white contact__heading">Get In Touch</h2>
+            <div class="contact__info">
+                <div class="contact__info-items">Call: +44 1782 993232</div>
+                <div class="contact__info-items">Email: Decoder145@gmail.com</div>
+                <div class="contact__info-items">
+                    Based in: Park House, 38 Abbey Foregate,</br>
+                    Strawberry, Shopshare SY4 Billy, GT 
+                </div>
+                <div class="contact__info-items">
+                    <span>Socials:</span>
+                    <ion-icon name="logo-facebook"></ion-icon>
+                    <ion-icon name="logo-twitter"></ion-icon>
+                    <ion-icon name="logo-googleplus"></ion-icon>
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </div>
+            </div>
             <form action="post" class="contact__form">
-                <label for=""></label>
+                <input type="name" class="contact__input" placeholder="Your Name." required>
+                <label for="" class="contact__label">Name:</label>
+                <input type="Email" class="contact__input" placeholder="Your Email." required>
+                <label for="" class="contact__label">Email:</label>
+                <textarea cols="30" class="contact__message" rows="10"placeholder="Type your message here." required></textarea>
+                <label for="" class="contact__title">Message:</label>
+                <button class="btn btn__contact">Send</button>
             </form>
         </section>
+        <!---<section class="locationmap">
+            <div class="map"></div>
+        </section>---->
+        <section class="footer">
+            <div class="logo">
+                <div class="logo__info">Cleinz</div>
+                <p class="logo__text"> Designing the most beautiful wbsites to make you proud
+                    make your idea a reality exercitationem repudiandae. Adipisci fug
+                    it fugiat facilis labore ex.
+                </p>
+                <div class="logo__items">
+                    <span>Follow us</span>
+                    <ion-icon name="logo-facebook"></ion-icon>
+                    <ion-icon name="logo-twitter"></ion-icon>
+                    <ion-icon name="logo-googleplus"></ion-icon>
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </div>
+            </div>
+            
+            <nav class="footer-navigation footer-nav">
+                <ul class="footer-navigation__list">
+                    <li class="footer-navigation__list-item"><a href="#about" class="footer-navigation__link footer__link">About</a></li>
+                    <li class="footer-navigation__list-item"><a href="#work" class="footer-navigation__link footer__link">Our work</a></li>
+                    <li class="footer-navigation__list-item"><a href="#team" class="footer-navigation__link footer__link">Our team</a></li>
+                    <li class="footer-navigation__list-item"><a href="#team" class="footer-navigation__link footer__link">Services</a></li>
+                    <li class="footer-navigation__list-item"><a href="#" class="footer-navigation__link footer__link">Contact</a></li>
+                </ul>
+            </nav>
+            <nav class="footer-navigation1">
+                <ul class="footer-navigation__list">
+                    <li class="footer-navigation__list-item"><a href="#about" class="footer-navigation__link footer__link">F.A.Q</a></li>
+                    <li class="footer-navigation__list-item"><a href="#work" class="footer-navigation__link footer__link">Policy</a></li>
+                    <li class="footer-navigation__list-item"><a href="#team" class="footer-navigation__link footer__link">BLog</a></li>
+                </ul>
+            </nav>
 
+            <div class="newsletter">
+                <h2 class="newsletter__heading">Stay Connected</h2>
+                <p class="newsletter__text">
+                    Subscribe to our mailing list to be the first to recieve updates and 
+                    lastest plugins and features.
+                </p>
+                <form action="Post" class="newsletter__form">
+                    <input type="email" class="newsletter__input"placeholder="Subscribe to our newsletter">
+                    <button class="btn btn__newsletter">Subscribe</button>
+                </form>
+            </div>
+            <p class="copyright">Copyright by Sanny antoine 2019</p>
+        </section>
+        
+       
+        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="Js/slick.min.js"></script>
-        <script src="Js/main.js"></script>
+         <script src="Js/slick.min.js"></script>
+         <script src="Js/main.js"></script>
     </body>
 </html>
